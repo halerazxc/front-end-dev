@@ -1,4 +1,3 @@
-import logo from './dezign.png'
 import arrowDown from './ArrowDown.svg'
 import mc from './McLogo.svg'
 import work from './Work.png'
@@ -17,7 +16,6 @@ import hotel from './hotel-work.png'
 import arrowRight from './arrow-right.svg'
 
 export const assets = {
-  logo,
   arrowDown,
   mc,
   work,
