@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { assets } from '../assets/assets.tsx'
 import { Typewriter } from 'react-simple-typewriter'
-import { motion } from "motion/react"
 
 const Header = () => {
   const [showMobileNav, setShowMobileNav] = useState(false)

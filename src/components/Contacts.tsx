@@ -1,28 +1,27 @@
-import { motion } from "motion/react";
-import { useState } from "react";
-import React from 'react'
+import { motion } from "framer-motion"; // Правильный импорт framer-motion
+import React from "react";
 
 const Contacts = () => {
-
   const [result, setResult] = React.useState("");
 
-  const onSubmit = async (event) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setResult("Sending....");
-    const formData = new FormData(event.target);
+    setResult("Sending...");
 
+    const form = event.target as HTMLFormElement;
+    const formData = new FormData(form);
     formData.append("access_key", "27af5eec-88d8-4735-aedd-71cf26b40e33");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData
+      body: formData,
     });
 
     const data = await response.json();
 
     if (data.success) {
       setResult("Form Submitted Successfully");
-      event.target.reset();
+      form.reset(); // Правильно сбрасываем форму
     } else {
       console.log("Error", data);
       setResult(data.message);
