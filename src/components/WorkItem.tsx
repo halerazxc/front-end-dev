@@ -1,6 +1,8 @@
 import { assets } from "../assets/assets";
 
 const WorkItem = ({
+
+  
   title,
   description,
   type,
@@ -15,6 +17,8 @@ const WorkItem = ({
   link: string;
   reverse?: boolean;
 }) => {
+  
+
   return (
     <>
       <div
