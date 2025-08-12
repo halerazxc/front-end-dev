@@ -4,7 +4,6 @@ import Gadgets from "./components/Gadgets";
 import Header from "./components/Header";
 import ScrollProgress from "./components/ScrollProgress";
 import ScrollTop from "./components/ScrollTop";
-import WorkItem from "./components/WorkItem";
 import Works from "./components/Works";
 
 function App() {
