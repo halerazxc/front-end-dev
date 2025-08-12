@@ -1,6 +1,45 @@
-import WorkContent from './WorkContent'
-import WorkContentReverse from './WorkContentReverse'
-import { motion } from 'motion/react'
+import { motion } from "motion/react";
+import WorkItem from "./WorkItem";
+import { assets } from "../assets/assets";
+
+const worksData = [
+  {
+    title: "Bank Project Website",
+    description:
+      "A modern and secure interface for online banking with responsive layout, smooth animation and an emphasis on user experience.",
+    type: "Frontend website development",
+    img: assets.bank,
+    link: "https://project-bank-chi.vercel.app/",
+    reverse: false,
+  },
+  {
+    title: "Hotels Project Website",
+    description:
+      "Development of a hotel booking website with convenient search, customer reviews and adaptation to all devices.",
+    type: "Frontend website development",
+    img: assets.hotel,
+    link: "https://real-estate-rho-mauve.vercel.app/",
+    reverse: true,
+  },
+  {
+    title: "Cheese Project Website",
+    description:
+      "A landing page for cheese products with responsive layout, clean typography, and smooth animations. Built from scratch based on the design mockup and optimized for fast loading.",
+    type: "Frontend website development",
+    img: assets.cheese,
+    link: "https://halerazxc.github.io/chees-html/",
+    reverse: false,
+  },
+  {
+    title: "2D Game Project Website",
+    description:
+      "A 2D game featuring modern design, interactive elements, and smooth transitions. Fully optimized for mobile devices and cross-browser compatibility.",
+    type: "Frontend website development",
+    img: assets.game,
+    link: "https://halerazxc.github.io/Elemental_-2D-MMORPG/domendomen/",
+    reverse: true,
+  },
+];
 
 const Works = () => {
   return (
@@ -8,15 +47,20 @@ const Works = () => {
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 50 }}
         whileInView={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: 'easeOut' }}
-        viewport={{ once: true, amount: 0.4}}
-        className='container mx-auto mt-[40px] lg:py-[34px] py-4 px-6 lg:px-[112px]'>
-        <h1 id='MyWorks' className='text-[30px] md:text-[40px] text-white font-extralight '><span className='text-gray-500'>Selected</span> Works</h1>
-        <WorkContent />
-        <WorkContentReverse />
-      </motion.div >
+        className="container mx-auto mt-[40px] lg:py-[34px] py-4 px-6 lg:px-[112px]"
+      >
+        <h1
+          id="MyWorks"
+          className="text-[30px] md:text-[40px] text-white font-extralight "
+        >
+          <span className="text-gray-500">Selected</span> Works
+        </h1>
+        {worksData.map((works, index) => (
+          <WorkItem key={index} {...works} />
+        ))}
+      </motion.div>
     </>
-  )
-}
+  );
+};
 
-export default Works
+export default Works;
