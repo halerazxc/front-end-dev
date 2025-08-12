@@ -11,6 +11,8 @@ import tailwind from './Tailwind.svg'
 import bank from './bank-work.png'
 import hotel from './hotel-work.png'
 import arrowRight from './arrow-right.svg'
+import cheese from './cheese.png'
+import game from './game.png'
 
 export const assets = {
   arrowDown,
@@ -25,6 +27,8 @@ export const assets = {
   tailwind,
   bank,
   hotel,
-  arrowRight
+  arrowRight,
+  cheese,
+  game
 }
 
