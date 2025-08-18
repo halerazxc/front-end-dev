@@ -30,7 +30,8 @@ const worksData = [
     img: assets.cheese,
     link: "https://halerazxc.github.io/chees-html/",
     reverse: false,
-  }
+  },
+];
 
 const Works = () => {
   const [loading, setLoading] = useState(true);
