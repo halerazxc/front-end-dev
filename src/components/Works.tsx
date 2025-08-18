@@ -30,17 +30,7 @@ const worksData = [
     img: assets.cheese,
     link: "https://halerazxc.github.io/chees-html/",
     reverse: false,
-  },
-  {
-    title: "2D Game Project Website",
-    description:
-      "A 2D game featuring modern design, interactive elements, and smooth transitions. Fully optimized for mobile devices and cross-browser compatibility.",
-    type: "Frontend website development",
-    img: assets.game,
-    link: "https://halerazxc.github.io/Elemental_-2D-MMORPG/domendomen/",
-    reverse: true,
-  },
-];
+  }
 
 const Works = () => {
   const [loading, setLoading] = useState(true);
